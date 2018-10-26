@@ -118,6 +118,9 @@ class ValueMapper
         switch ($type) {
             case 'booleanValue':
             case 'nullValue':
+                return null;
+                break;
+                
             case 'stringValue':
             case 'doubleValue':
                 return $value;
