@@ -46,7 +46,9 @@ require 'vendor/autoload.php';
 
 use Google\Cloud\Firestore\FirestoreClient;
 
-$firestore = new FirestoreClient();
+$firestore = new FirestoreClient([
+    'projectId' => 'Project-id-From-firebase',
+]);
 
 $collectionReference = $firestore->collection('Users');
 $documentReference = $collectionReference->document($userId);
